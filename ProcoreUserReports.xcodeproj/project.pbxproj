@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		12474BAF2126656100E577E1 /* CodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12474BAE2126656100E577E1 /* CodableExtensions.swift */; };
+		12474BB12126800700E577E1 /* telemetry-report.json in Resources */ = {isa = PBXBuildFile; fileRef = 12474BB02126800700E577E1 /* telemetry-report.json */; };
 		12AB250921265D1A0081B809 /* UserReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AB250821265D1A0081B809 /* UserReport.swift */; };
 		12AB250B21265DC40081B809 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AB250A21265DC40081B809 /* Database.swift */; };
 		12AB250F21265EE00081B809 /* JSONDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AB250E21265EE00081B809 /* JSONDocument.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		12474BAE2126656100E577E1 /* CodableExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableExtensions.swift; sourceTree = "<group>"; };
+		12474BB02126800700E577E1 /* telemetry-report.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "telemetry-report.json"; sourceTree = "<group>"; };
 		12AB250821265D1A0081B809 /* UserReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReport.swift; sourceTree = "<group>"; };
 		12AB250A21265DC40081B809 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		12AB250E21265EE00081B809 /* JSONDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDocument.swift; sourceTree = "<group>"; };
@@ -50,6 +52,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12474BB22126801300E577E1 /* Reports */ = {
+			isa = PBXGroup;
+			children = (
+				12474BB02126800700E577E1 /* telemetry-report.json */,
+			);
+			path = Reports;
+			sourceTree = "<group>";
+		};
 		12AB25042126586D0081B809 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +140,7 @@
 				12B02E8A21265511009E1E66 /* Assets.xcassets */,
 				12B02E8F21265511009E1E66 /* Info.plist */,
 				12B02E9821265594009E1E66 /* GoogleService-Info.plist */,
+				12474BB22126801300E577E1 /* Reports */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -220,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12474BB12126800700E577E1 /* telemetry-report.json in Resources */,
 				12B02E8E21265511009E1E66 /* LaunchScreen.storyboard in Resources */,
 				12B02E9921265594009E1E66 /* GoogleService-Info.plist in Resources */,
 				12B02E8B21265511009E1E66 /* Assets.xcassets in Resources */,

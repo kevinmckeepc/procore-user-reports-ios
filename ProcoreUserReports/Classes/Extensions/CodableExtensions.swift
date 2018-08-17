@@ -8,10 +8,6 @@
 
 import Foundation
 
-enum JSONError: Error {
-    case malformed
-}
-
 typealias JSON = [String: Any]
 
 extension Decodable {
@@ -26,14 +22,16 @@ extension Decodable {
 
 extension Encodable {
     
-    func toJSON() throws -> JSON {
+    func toJSON() -> JSON {
         let encoder = JSONEncoder()
         encoder.dateEncodingStrategy = .iso8601
-        let data = try encoder.encode(self)
-        guard let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? JSON else {
-            throw JSONError.malformed
-        }
-        return json
+        do {
+            let data = try encoder.encode(self)
+            guard let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? JSON else {
+                return [:]
+            }
+            return json
+        } catch { }
+        return [:]
     }
-    
 }

@@ -24,9 +24,11 @@ struct Database {
             guard let snapshot = snapshot, !snapshot.documents.isEmpty, error == nil else {
                 return completion(nil, nil, error)
             }
-
+            
             for change in snapshot.documentChanges {
-                let jsonDoc = try? D(json: change.document.data())
+                print("💥")
+                var jsonDoc = try? D(json: change.document.data())
+                jsonDoc?.documentID = change.document.documentID
                 switch change.type {
                 case .added:
                     completion(jsonDoc, .added, nil)
@@ -40,5 +42,28 @@ struct Database {
                 }
             }
         }
+    }
+    
+    // Generates a sample report and saves it to Firebase
+    static func sendSampleReport() {
+        guard let path = Bundle.main.path(forResource: "telemetry-report", ofType: "json") else {
+            return
+        }
+        
+        do {
+            let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+            
+            guard let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? JSON else {
+                return
+            }
+            
+            let db = Firestore.firestore()
+            let docCollection = db.collection(UserReport.collection())
+            
+            docCollection.addDocument(data: json)
+        } catch {
+            print(error)
+        }
+        
     }
 }

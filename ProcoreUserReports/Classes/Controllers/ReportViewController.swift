@@ -24,7 +24,8 @@ class ReportViewController: UITableViewController {
 
     private func startListener() {
         Database.listen { (report: UserReport?, changeType, error) in
-            guard let report = report, let changeType = changeType, error == nil else {
+
+            guard let report = report, let changeType = changeType else {
                 return
             }
             
@@ -33,14 +34,25 @@ class ReportViewController: UITableViewController {
                 self.reports.append(report)
                 break
             case .modified:
+                let index = self.reports.index(where: { (other) -> Bool in
+                    return other.documentID == report.documentID
+                })
+                
+                if let index = index {
+                    self.reports[index] = report
+                }
                 break
             case .removed:
                 // Super lazy matching going on ...
-                self.reports = self.reports.filter { $0.email != report.email }
+                self.reports = self.reports.filter { $0.documentID != report.documentID }
                 break
             }
             self.tableView.reloadData()
         }
+    }
+    
+    @IBAction func sendReport() {
+        Database.sendSampleReport()
     }
 }
 
@@ -58,7 +70,8 @@ extension ReportViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         let report = reports[indexPath.row]
-        cell.textLabel?.text = report.email
+        cell.textLabel?.text = report.login
+        cell.detailTextLabel?.text = "\(report.userID ?? 0)"
         return cell
     }
     

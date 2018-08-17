@@ -64,7 +64,13 @@
                             <outlet property="delegate" destination="cgx-DG-2Ws" id="5Rb-ak-zeJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="9Hw-YI-F20"/>
+                    <navigationItem key="navigationItem" id="9Hw-YI-F20">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fhh-3G-P73">
+                            <connections>
+                                <action selector="sendReport" destination="cgx-DG-2Ws" id="EBx-Ru-Bwg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyY-DK-9Hi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

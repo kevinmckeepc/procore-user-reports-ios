@@ -16,6 +16,8 @@ enum JSONDocumentChangeType {
 
 protocol JSONDocument: Codable {
     
+    var documentID: String? { get set }
+    
     // Returns the collection path in the json data store
     static func collection() -> String
 }

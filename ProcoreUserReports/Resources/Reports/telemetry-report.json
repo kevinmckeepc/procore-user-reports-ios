@@ -1,0 +1,71 @@
+{
+    "telemetry" : {
+        "appInfo" : {
+            "appVersion" : "10.1",
+            "appName" : "Procore",
+            "appBuildNumber" : "33040"
+        },
+        "permissionManager" : {
+            "current_project_id" : 277112,
+            "current_company_id" : 1910,
+            "permissions" : {
+                "commitments" : "admin",
+                "meetings" : "admin",
+                "specification_sections" : "admin",
+                "reports" : "admin",
+                "directory" : "admin",
+                "drawing_log" : "admin",
+                "timecard" : "admin",
+                "calendar" : "admin",
+                "budgeting" : "admin",
+                "change_events" : "admin",
+                "submittal_log" : "admin",
+                "images" : "admin",
+                "documents" : "admin",
+                "rfi" : "admin",
+                "daily_log" : "admin",
+                "punch_list" : "admin"
+            }
+        },
+        "deviceInfo" : {
+            "osName" : "iOS",
+            "osVersion" : "11.3",
+            "systemVersion" : "17.5.0",
+            "deviceTime" : "2018-07-28T14:40:47Z",
+            "systemName" : "Darwin",
+            "deviceId" : "551EEC3E-61AB-4090-A645-55D55F68602E",
+            "hardwareModel" : "iPad5,4",
+            "megabytesAvailable" : "29946.4"
+        },
+        "NetworkState" : {
+            "online" : true,
+            "type" : "none",
+            "reachability" : {
+                "type" : "none",
+                "flags" : "0"
+            }
+        },
+        "userContextManager" : {
+            "others" : [
+            
+            ],
+            "current" : {
+                "state" : "valid",
+                "oid" : "0x1c032ed80",
+                "refreshToken" : {
+                    "timestamp" : "2018-07-28T14:00:39.344Z",
+                    "token" : "JylycAuM4S7r0ni168FeP9q\/SleAILB7C4EIem4Fexs="
+                },
+                "key" : {
+                    "login" : "kevin.mckee@procore.com",
+                    "userID" : 987612321
+                },
+                "accessToken" : {
+                    "timestamp" : "2018-07-28T14:00:39.344Z",
+                    "token" : "i+1O3inW6Sz79q1ZUNevWRjnGV7pjq\/La4LDzvy4r2E="
+                }
+            }
+        }
+    }
+}
+
