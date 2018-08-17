@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12474BAF2126656100E577E1 /* CodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12474BAE2126656100E577E1 /* CodableExtensions.swift */; };
+		12AB250921265D1A0081B809 /* UserReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AB250821265D1A0081B809 /* UserReport.swift */; };
+		12AB250B21265DC40081B809 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AB250A21265DC40081B809 /* Database.swift */; };
+		12AB250F21265EE00081B809 /* JSONDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AB250E21265EE00081B809 /* JSONDocument.swift */; };
 		12B02E8421265510009E1E66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B02E8321265510009E1E66 /* AppDelegate.swift */; };
-		12B02E8621265510009E1E66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B02E8521265510009E1E66 /* ViewController.swift */; };
+		12B02E8621265510009E1E66 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B02E8521265510009E1E66 /* ReportViewController.swift */; };
 		12B02E8921265510009E1E66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B02E8721265510009E1E66 /* Main.storyboard */; };
 		12B02E8B21265511009E1E66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12B02E8A21265511009E1E66 /* Assets.xcassets */; };
 		12B02E8E21265511009E1E66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B02E8C21265511009E1E66 /* LaunchScreen.storyboard */; };
@@ -17,9 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12474BAE2126656100E577E1 /* CodableExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableExtensions.swift; sourceTree = "<group>"; };
+		12AB250821265D1A0081B809 /* UserReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReport.swift; sourceTree = "<group>"; };
+		12AB250A21265DC40081B809 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		12AB250E21265EE00081B809 /* JSONDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDocument.swift; sourceTree = "<group>"; };
 		12B02E8021265510009E1E66 /* ProcoreUserReports.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProcoreUserReports.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12B02E8321265510009E1E66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		12B02E8521265510009E1E66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		12B02E8521265510009E1E66 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		12B02E8821265510009E1E66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		12B02E8A21265511009E1E66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12B02E8D21265511009E1E66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -42,6 +50,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12AB25042126586D0081B809 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				12AB250821265D1A0081B809 /* UserReport.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		12AB2505212658BA0081B809 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				12AB250A21265DC40081B809 /* Database.swift */,
+				12AB250E21265EE00081B809 /* JSONDocument.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		12AB250C21265DFC0081B809 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				12474BAE2126656100E577E1 /* CodableExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		12B02E7721265510009E1E66 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +108,9 @@
 			children = (
 				12B02E8321265510009E1E66 /* AppDelegate.swift */,
 				12B02E9A2126559C009E1E66 /* Controllers */,
+				12AB25042126586D0081B809 /* Models */,
+				12AB250C21265DFC0081B809 /* Extensions */,
+				12AB2505212658BA0081B809 /* Database */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -101,7 +137,7 @@
 		12B02E9A2126559C009E1E66 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				12B02E8521265510009E1E66 /* ViewController.swift */,
+				12B02E8521265510009E1E66 /* ReportViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -201,12 +237,26 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ProcoreUserReports/Pods-ProcoreUserReports-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,7 +304,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12B02E8621265510009E1E66 /* ViewController.swift in Sources */,
+				12B02E8621265510009E1E66 /* ReportViewController.swift in Sources */,
+				12AB250F21265EE00081B809 /* JSONDocument.swift in Sources */,
+				12474BAF2126656100E577E1 /* CodableExtensions.swift in Sources */,
+				12AB250921265D1A0081B809 /* UserReport.swift in Sources */,
+				12AB250B21265DC40081B809 /* Database.swift in Sources */,
 				12B02E8421265510009E1E66 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,7 +457,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H5ZTW5JSK5;
 				INFOPLIST_FILE = "$(SRCROOT)/ProcoreUserReports/Resources/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.procore.ProcoreUserReports;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -419,7 +476,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H5ZTW5JSK5;
 				INFOPLIST_FILE = "$(SRCROOT)/ProcoreUserReports/Resources/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.procore.ProcoreUserReports;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
