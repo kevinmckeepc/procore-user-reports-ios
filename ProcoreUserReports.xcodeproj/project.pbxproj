@@ -12,6 +12,7 @@
 		12B02E8921265510009E1E66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B02E8721265510009E1E66 /* Main.storyboard */; };
 		12B02E8B21265511009E1E66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12B02E8A21265511009E1E66 /* Assets.xcassets */; };
 		12B02E8E21265511009E1E66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B02E8C21265511009E1E66 /* LaunchScreen.storyboard */; };
+		12B02E9921265594009E1E66 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12B02E9821265594009E1E66 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		12B02E8A21265511009E1E66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12B02E8D21265511009E1E66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12B02E8F21265511009E1E66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12B02E9821265594009E1E66 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,47 @@
 		12B02E8221265510009E1E66 /* ProcoreUserReports */ = {
 			isa = PBXGroup;
 			children = (
-				12B02E8321265510009E1E66 /* AppDelegate.swift */,
-				12B02E8521265510009E1E66 /* ViewController.swift */,
-				12B02E8721265510009E1E66 /* Main.storyboard */,
-				12B02E8A21265511009E1E66 /* Assets.xcassets */,
-				12B02E8C21265511009E1E66 /* LaunchScreen.storyboard */,
-				12B02E8F21265511009E1E66 /* Info.plist */,
+				12B02E952126551B009E1E66 /* Classes */,
+				12B02E9621265527009E1E66 /* Storyboards */,
+				12B02E972126552E009E1E66 /* Resources */,
 			);
 			path = ProcoreUserReports;
+			sourceTree = "<group>";
+		};
+		12B02E952126551B009E1E66 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				12B02E8321265510009E1E66 /* AppDelegate.swift */,
+				12B02E9A2126559C009E1E66 /* Controllers */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		12B02E9621265527009E1E66 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				12B02E8721265510009E1E66 /* Main.storyboard */,
+				12B02E8C21265511009E1E66 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		12B02E972126552E009E1E66 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				12B02E8A21265511009E1E66 /* Assets.xcassets */,
+				12B02E8F21265511009E1E66 /* Info.plist */,
+				12B02E9821265594009E1E66 /* GoogleService-Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		12B02E9A2126559C009E1E66 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				12B02E8521265510009E1E66 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				12B02E8E21265511009E1E66 /* LaunchScreen.storyboard in Resources */,
+				12B02E9921265594009E1E66 /* GoogleService-Info.plist in Resources */,
 				12B02E8B21265511009E1E66 /* Assets.xcassets in Resources */,
 				12B02E8921265510009E1E66 /* Main.storyboard in Resources */,
 			);
@@ -282,7 +318,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H5ZTW5JSK5;
-				INFOPLIST_FILE = ProcoreUserReports/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ProcoreUserReports/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +336,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H5ZTW5JSK5;
-				INFOPLIST_FILE = ProcoreUserReports/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ProcoreUserReports/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
